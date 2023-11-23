@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +12,6 @@
 	<!-- <link rel="stylesheet" href="Style.css">-->
 	<link rel="stylesheet" href="#Style">
 	<title>https://www.greymansystems.net/home</title>
-
 </head>
 
 <body id="body" class="body">
@@ -86,13 +84,7 @@
 			<a href="#greymanHomepage">
 				<p>HOME</p>
 			</a>
-		<!--	<p>
-				<a href="#Profilepage">PROFILE |</a>
-				<a href="#Packagespage">PACKAGE |</a>
-				<a href="#whatsapdiv">CHAT |</a>
-				<a href="#Alertspage">ALERTS |</a>
-				<a href="#Appointmentspage">APPOINTMENTS</a>
-			</p> -->
+		
 			<div class="Homedivs">
 				<b>BIOS BOT </b>
 				<form onclick="Adding()">
@@ -148,14 +140,7 @@
 			<p>
 				PACKAGE
 			</p>
-		<!--	<p>
-				<a href="#Homepage">HOME |</a>
-				<a href="#Profilepage">PROFILE |</a>
-				<a href="#Packagespage">PACKAGE |</a>
-				<a href="#whatsapdiv">CHAT |</a>
-				<a href="#Alertspage">ALERTS |</a>
-				<a href="#Appointmentspage">APPOINTMENTS</a><br />
-			</p>  -->
+		
 			<p>
 				We Offer infinite Range of Hitech Services
 				<!-- <img src="teimcaninevect.png" alt="caninevect" width="100%" height="490px"/>
@@ -184,13 +169,7 @@
 				CHATS
 			</p>
 			<hr />
-			<!--<p>
-				<a href="#Homepage">HOME |</a>
-				<a href="#Profilepage">PROFILE |</a>
-				<a href="#Packagespage">PACKAGE |</a>
-				<a href="#Alertspage">ALERTS |</a>
-				<a href="#Appointmentspage">APPOINTMENTS</a>
-			</p> -->
+			
 			<span>
 				Email: info@greymansystems.co.ke
 			</span>
@@ -227,26 +206,12 @@
 					<input type="submit" id="Btnsubmit" class="Btnsubmit" value="" hidden="true">
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<button type="button" id="BtnWaSend" class="BtnWaSend">
-						<!--  <center>
-												                    <img src="watsap.png" alt="" width="30px" height="30px" />-->
-						<!-- <a href="#WatsapPage"> onclick="sendWhatsappmsg();"</a>
-												                    <a href="#WatsapPage"></a>
-												                </center>-->
+					Send
 					</button>
-					&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-					<button type="button" id="BtnRefresh" class="BtnRefresh">
-						<!-- <img src="file:///android_asset/res/GreenRefresh.png" usemap="#GreenRefresh" width="30px" height="30px"/>
-												                <center>REFRESH
-												                <a href="#WatsapPage">SEND</a>
-												                  <a href="#WatsapPage"></a>
-												                 </center> -->
-					</button>
+					<button type="button" id="BtnRefresh">Refresh</button>
 					&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-					<button type="reset" id="BtnClear" class="BtnClear" value="RESET">
-						<!--  <center>
-												                  <img src="RedBin.png" alt="" width="35px" height="35" />
-												                    <a href="#WatsapPage">SEND</a>
-												                </center>-->
+					<button type="reset" id="BtnClear" class="BtnClear" value="reset">
+						Reset 
 					</button>
 					&nbsp;&nbsp;
 				</div>
@@ -275,14 +240,8 @@
 			<p>
 				ALERTS
 			</p>
-		<!-- <p>
-				<a href="#Homepage">HOME |</a>
-				<a href="#Profilepage">PROFILE |</a>
-				<a href="#Packagespage">PACKAGE |</a>
-				<a href="#whatsapdiv">CHAT |</a>
-				<a href="#Appointmentspage">APPOINTMENTS</a>
-			</p> -->
-			<img src="teimclandestinevect.png" alt="profvect" width="100%" height="370px" /><br />
+	
+			<img src="logo_night.png" alt="profvect" width="100%" height="370px" /><br />
 		</div>
 
 		<br>
@@ -293,16 +252,7 @@
 			<p>
 				APPOINTMENTS
 			</p>
-		<!--
-		<p>
-				<a href="#Homepage">HOME |</a>
-				<a href="#Profilepage">PROFILE |</a>
-				<a href="#Packagespage">PACKAGE |</a>
-				<a href="#whatsapdiv">CHAT |</a>
-				<a href="#Alertspage">ALERTS |</a>
-				<a href="#Alertspage">ALERTS |</a> 
-			</p>
-			-->
+		
 			<div class="mapouter">
 				<div class="gmap_canvas">
 					<iframe width="600" height="500" id="gmap_canvas"
@@ -323,7 +273,7 @@
 
 	</main>
 
-	<footer>
+	<footer class="pge-foot">
 		<!-- Copyright page -->
 		<div id="Copydiv" class="Copydiv">
 			<center>
@@ -433,7 +383,7 @@
 </script>
 
 
-<script>
+<script type="text/javascript">
 
 	let toogle = document.getElementById("switch");
 	let darkmode = document.getElementById("dark");
@@ -578,11 +528,32 @@
 		overflow: hidden;
 		clear: both;
 	}
+	.pge-foot {
+		position: fixed;
+		top: 63vh;
+		left: 2px;
+		max-width: 97%;
+		width: 95%;
+		max-height: 26vh;
+		height: 25vh;
+		background-color: rgba(0,0,0,0.3);
+		border: 2px solid #14A9C1;
+		border-radius: 12px;
+		/*padding-top: 7px;
+		padding-right: 20px;*/
+		margin-left: 1%;
+		margin-right: 2%;
+		margin-bottom: 1em;
+		/*z-index: 8;*/
+		overflow: hidden;
+		
+	}
 	.h1Div {
 		background-color: blue;
 		font-family: 'Arial black';
 		font-size: 84%;
 		width: 97%;
+		margin-left: 3px;
 		height: 45px;
 		text-align: center;
 		color: Cyan;
@@ -692,7 +663,6 @@
 		background-position: center;
 		cursor: crosshair;
 		margin-bottom: 3px;
-
 	}
 
 	.Packdiv {
