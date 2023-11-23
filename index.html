@@ -120,7 +120,7 @@
 				<img src="NoImageGent.png" alt="TRAINING" width="70" height="60" /><br />
 				<!-- <strong>Intell</strong><br/> -->
 			</div>
-			<strong>TECHNICAL BENCH</strong>
+			<!-- <strong>TECHNICAL BENCH</strong> -->
 			<!-- <img src="teimresnogent.png" alt="nogentvect" width="40%" height="390px" /><br />-->
 		</div>
 
@@ -186,16 +186,15 @@
 				</label>
 				&nbsp;<br>
 
-				<textarea id="txt_Message" class="txt_Message" aria-posinset="0" autocapitalize="sentences" rows="13"
+				<textarea id="txt_Message" class="txt_Message" aria-posinset="0" autocapitalize="sentences" rows="8"
 					cols="1" multiline="true" aria-multiline="true" tabindex="3" placeholder="Enter message text"
 					oninput="draftMsgs();"></textarea>
 					
-				<br>
-				<input type="text" id="txt_Wadraft" class="txt_Wadraft" name="txt_Wadraft" tabindex="4"
-				placeholder="url"><br />
 				<br />
 				<input type="hidden" id="MsgsTxts" name="text" >
-				<br>
+				<input type="text" id="txt_Wadraft" class="txt_Wadraft" name="txt_Wadraft" tabindex="4"
+				placeholder="url"><br />
+				
 				<div class="contsDiv">
 					<input type="submit" id="Btnsubmit" class="Btnsubmit" value="" hidden="true">
 					&nbsp;&nbsp;&nbsp;&nbsp;
@@ -481,6 +480,9 @@
 		padding: 3px 3px auto;
 		/* bgcolor="0xFF060027" text="#fff8dc" link="#33ff66" vlink="#ff0000" alink="#999999" */
 	}
+	button{
+		user-select: none;
+	}
 	.pge-head {
 		position: fixed;
 		top: 2vh;
@@ -721,13 +723,13 @@
 	.txt_Message {
 		font-family: 'Arial black', sans-serif;
 		background-color: rgb(8, 133, 250);
-		height: 140px;
+		height: 103px;
 		width: 98%;
 		float: left;
 		opacity: 0.5;
 		color: rgba(8, 40, 71, 0.87);
 		text-align: left;
-		text-indent: -50px;
+		/*text-indent: -50px;*/
 		cursor: text;
 		user-select: text;
 		column-width: 100%;
