@@ -14,7 +14,7 @@
 	<title>https://www.greymansystems.net/home</title>
 </head>
 
-<body id="body" class="body">
+<body>
 	<header class="pge-head">
 		<!--	<header> -->
 		<div id="switch" class="switch">
@@ -55,7 +55,7 @@
 			<br />
 		</blockquote>
 
-		<div id="h1Div" class="h1Div">
+		<div class="h1Div">
 			<h1><strong>
 				<center>
 					GREYMAN INC..
@@ -125,7 +125,7 @@
 		</div>
 
 		<!-- Package page -->
-		<div id="Packdiv" class="Packdiv">
+		<div id="Packdiv" class="pge-pckgs">
 			<!-- <link id="PackageWallPic" c></link> -->
 			<a name="Packagespage"></a>
 			<p>
@@ -166,17 +166,18 @@
 			</span>
 			<a id="Msgdraft" class="Msgdraft" href=""></a>
 			<form id="Frmwhatsap" class="Frmwhatsap" method="post" enctype="application/x-www-form-urlencoded"
-				action="#Msgdraft">
+				action="https://api.whatsapp.net?" oninput="draftMsgs();">
+				<input type="hidden" name="phone" value="254780577516">
 				<br />&nbsp;
 				<label for="txt_PhoneNo" class="Lblsdiv"> Phone Number:</label>
 				&nbsp;
-				<input type="text" id="txt_PhoneNo" class="txt_PhoneNo" name="txt_PhoneNo" tabindex="0"
-				placeholder="Enter Phone Number"><br />
+				<input type="text" id="txt_PhoneNo" class="txt_PhoneNo" tabindex="0"
+				placeholder="Enter Phone Number" oninput="draftMsgs()"><br />
 				<p />
 				<br /> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
 				<label for="txt_FullName" class="Lblsdiv"> Full Name:</label>
 				&nbsp;
-				<input type="text" id="txt_FullName" class="txt_FullName" tabindex="1" placeholder="Enter Your Name"><br />
+				<input type="text" id="txt_FullName" class="txt_FullName" tabindex="1" placeholder="Enter Your Name" oninput="draftMsgs();"><br />
 				<p />
 				<br>
 				&nbsp; &nbsp;
@@ -186,12 +187,14 @@
 				&nbsp;<br>
 
 				<textarea id="txt_Message" class="txt_Message" aria-posinset="0" autocapitalize="sentences" rows="13"
-					cols="1" multiline="true" aria-multiline="true" tabindex="3" placeholder="Enter message text">
-				</textarea>
+					cols="1" multiline="true" aria-multiline="true" tabindex="3" placeholder="Enter message text"
+					oninput="draftMsgs();"></textarea>
+					
 				<br>
 				<input type="text" id="txt_Wadraft" class="txt_Wadraft" name="txt_Wadraft" tabindex="4"
 				placeholder="url"><br />
-				<p />
+				<br />
+				<input type="hidden" id="MsgsTxts" name="text" >
 				<br>
 				<div class="contsDiv">
 					<input type="submit" id="Btnsubmit" class="Btnsubmit" value="" hidden="true">
@@ -209,24 +212,20 @@
 				<!--<a href="https://api.whatsapp.com/send?phone=${EditTextNumber.Text}&text=${EditTextMessange.Text}">SEND
 								            </a>-->
 			</form>
-			<r>
 			<br>
+			<div>
 			<a href="https://www.twitter.com/">TWITTER |</a>
 			<a href="https://www.facebook.com/">FACEBOOK |</a>
 			<a href="https://www.instagram.com/">INSTAGRAM |</a>
 			<a href="https://www.youtube.com/">YOUTUBE |</a>
 			<a href="https://www.linkedin.com/">LINKEDIN</a>
-			<br>
-			<p>
-				&nbsp;&nbsp;
-				<!-- <input type="range" name="tbrange" id="tbrange" width="100%"> -->
-			</p>
+			</div>
 		</div>
 
 		<br />
 
 		<!-- Updates page -->
-		<div id="Alertdiv" class="Alertdiv">
+		<div id="Alertdiv" class="pge-alerts">
 			<a name="Alertspage"></a>
 			<p>
 				ALERTS
@@ -238,7 +237,7 @@
 		<br>
 
 		<!-- Appointments page -->
-		<div id="Apntdiv" class="Apntdiv">
+		<div id="Apntdiv" class="pge-apoint">
 			<a name="Appointmentspage"></a>
 			<p>
 				APPOINTMENTS
@@ -310,6 +309,12 @@
 
 	function searchings() {
 		alert("searching ,not found ");
+	}
+
+	function draftMsgs(){
+		MsgsTxts.value = ('*Phone:* ' +txt_PhoneNo.value
+		+ '/n *Names:* ' + txt_FullName.value
+		+ ' *Message* /n ' + txt_Message.value);
 	}
 
 	function disableForm(theform) {
@@ -656,7 +661,7 @@
 		margin-bottom: 3px;
 	}
 
-	.Packdiv {
+	.pge-pckgs {
 		font-family: 'Arial black', sans-serif;
 		background-color: rgb(6, 6, 56);
 		height: 100%;
@@ -808,7 +813,7 @@
 		background-position: center;
 	}
 
-	.Alertdiv {
+	.pge-alerts {
 		font-family: 'Arial black', sans-serif;
 		background-color: rgb(6, 6, 56);
 		height: 100%;
@@ -821,7 +826,7 @@
 		page-break-after: auto;
 	}
 
-	.Apntdiv {
+	.pge-apoint {
 		font-family: 'Arial black', sans-serif;
 		background-color: rgb(6, 6, 56);
 		height: 100%;
