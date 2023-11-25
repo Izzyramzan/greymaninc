@@ -101,7 +101,7 @@
 					<!-- <br>  -->
 					<form id="frmsearch" method="GET" action="https://www.google.com/search?" target="_top">
 						<input type="search" name="q" id="search" class="searchtxt" placeholder="search"
-							oninput="FrmGmap.src = frmsearch.action + 'q=' + this.value">
+							oninput="FrmGmap.src = frmsearch.action + 'q=' + URLEncode(this.value);">
 					</form>
 					<!-- <p /><br> -->
 				</div>
